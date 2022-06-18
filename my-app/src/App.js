@@ -1,6 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
-import { useEffect } from 'react';
+
+import React, { useEffect } from 'react';
 
 
 // need to set json server to different port? how?
