@@ -23,11 +23,6 @@ function App() {
 
 
 
-    fetch(`https://travel-advisor.p.rapidapi.com/locations/v2/auto-complete?query=${destination}&lang=en_US&units=km`, options)
-	    .then(response => response.json())
-	    .then(response => console.log(response))
-	    .catch(err => console.error(err));
-
 
   
   //  fetch('http://localhost:8000/locations'),{
