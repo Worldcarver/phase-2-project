@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react';
 import SearchBar from './Components/SearchBar';
+import Header from './Components/Header'
+import DestinationDisplay from './Components/DesitnationDisplay'
+import DestinationList from './Components/DestinationList'
 
 // need to set json server to different port? how?
 // send fetch to external api, and send post to json to capture data, inerpolate the data?
@@ -16,16 +19,17 @@ function App() {
 
     //use variable with e.target to pull input text to send to api to pull searches
     //post needs a submit button to work?
-    const destination = 'las vegas'
+    //const destination = 'las vegas'
+
+    //https://travel-advisor.p.rapidapi.com/locations/v2/auto-complete?query=${destination}&lang=en_US&units=km
+    // , options
 
 
 
 
-
-
-    fetch(`https://travel-advisor.p.rapidapi.com/locations/v2/auto-complete?query=${destination}&lang=en_US&units=km`, options)
+    fetch(`http://localhost:8000/locations`)
 	    .then(response => response.json())
-	    .then(response => console.log(response))
+	    .then(response => destinations(response))
 	    .catch(err => console.error(err));
 
 
@@ -41,7 +45,8 @@ function App() {
 
   return (
     <div className="App">
-     <SearchBar setSearchInput={setSearchInput} />
+      <Header />
+      <SearchBar setSearchInput={setSearchInput} />
     </div>
   );
 }
