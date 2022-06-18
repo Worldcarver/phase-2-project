@@ -14,16 +14,19 @@ function App() {
 
   useEffect(() => {
 
-    
-    //add const from slack here
+    //use variable with e.target to pull input text to send to api to pull searches
+    //post needs a submit button to work?
+    const destination = 'las vegas'
 
 
 
 
-  fetch(`https://travel-advisor.p.rapidapi.com/locations/v2/auto-complete?query=las%20vegas&lang=en_US&units=km`, options)
-	  .then(response => response.json())
-	  .then(response => console.log(response))
-	  .catch(err => console.error(err));
+
+
+    fetch(`https://travel-advisor.p.rapidapi.com/locations/v2/auto-complete?query=${destination}&lang=en_US&units=km`, options)
+	    .then(response => response.json())
+	    .then(response => console.log(response))
+	    .catch(err => console.error(err));
 
 
   
