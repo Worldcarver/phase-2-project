@@ -16,7 +16,7 @@ function SearchBar({ setSearchInput }) {
       <input
         type="text"
         id="search"
-        placeholder="search free stuff"
+        placeholder="Search for a Destination!"
         value={searchBar}
         onChange={(e) => setSearchBar(e.target.value)}
       />
