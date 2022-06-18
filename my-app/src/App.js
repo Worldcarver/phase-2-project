@@ -1,6 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import SearchBar from './Components/SearchBar'
+
 
 
 // need to set json server to different port? how?
@@ -10,6 +10,8 @@ import { useEffect } from 'react';
 
 
 function App() {
+  const [destinations, setDestinations] = useState([])
+  const [searchInput, setSearchInput] = useState("")
 
 
   useEffect(() => {
@@ -17,8 +19,14 @@ function App() {
     //use variable with e.target to pull input text to send to api to pull searches
     //post needs a submit button to work?
     const destination = 'las vegas'
-
-
+    //add const here
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-RapidAPI-Key': 'd731705817mshe230c4e09e3f014p16249djsn407579c5d12d',
+        'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
+      }
+    };
 
 
 
@@ -41,7 +49,7 @@ function App() {
 
   return (
     <div className="App">
-     
+     <SearchBar setSearchInput = {setSearchInput}/>
     </div>
   );
 }
