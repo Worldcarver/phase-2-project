@@ -13,13 +13,13 @@ function App() {
 
 
   useEffect(() => {
-    const options = {
-      method: 'GET',
-      headers: {
-        'X-RapidAPI-Key': 'd731705817mshe230c4e09e3f014p16249djsn407579c5d12d',
-        'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
-      }
-    };
+
+    
+    //add const from slack here
+
+
+
+
   fetch(`https://travel-advisor.p.rapidapi.com/locations/v2/auto-complete?query=las%20vegas&lang=en_US&units=km`, options)
 	  .then(response => response.json())
 	  .then(response => console.log(response))
@@ -27,11 +27,11 @@ function App() {
 
 
   
-   fetch('http://localhost:8000/locations'),{
-     method: 'POST',
-     headers: { 'Content-Type': 'application/json'},
-     body: JSON.stringify({title: 'test'})
-  }
+  //  fetch('http://localhost:8000/locations'),{
+  //    method: 'POST',
+  //    headers: { 'Content-Type': 'application/json'},
+  //    body: JSON.stringify({title: 'test'})
+  // }
 
 }, [])
 
