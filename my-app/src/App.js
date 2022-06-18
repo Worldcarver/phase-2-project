@@ -1,6 +1,5 @@
-
 import React, { useEffect } from 'react';
-
+import SearchBar from './Components/SearchBar';
 
 // need to set json server to different port? how?
 // send fetch to external api, and send post to json to capture data, inerpolate the data?
@@ -10,6 +9,8 @@ import React, { useEffect } from 'react';
 
 function App() {
 
+  const [destinations, setDestinations] = useState([])
+  const [searchInput, setSearchInput] = useState("")
 
   useEffect(() => {
 
@@ -40,7 +41,7 @@ function App() {
 
   return (
     <div className="App">
-     
+     <SearchBar setSearchInput={setSearchInput} />
     </div>
   );
 }
