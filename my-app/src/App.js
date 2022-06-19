@@ -27,10 +27,10 @@ function App() {
 
 
     
-    fetch(`http://localhost:8000/locations`)
-	    .then(response => response.json())
-	    .then(response => destinations(response))
-	    .catch(err => console.error(err));
+    // fetch(`http://localhost:8000/locations`)
+	  //   .then(response => response.json())
+	  //   .then(response => destinations(response))
+	  //   .catch(err => console.error(err));
 
 
   
