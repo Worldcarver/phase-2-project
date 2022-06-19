@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import SearchBar from './Components/SearchBar';
 import Header from './Components/Header'
 import DestinationDisplay from './Components/DesitnationDisplay'
@@ -26,6 +26,12 @@ function App() {
 
 
 
+    
+    fetch(`http://localhost:8000/locations`)
+	    .then(response => response.json())
+	    .then(response => setDestinations(response))
+	    .catch(err => console.error(err));
+
 
   
   //  fetch('http://localhost:8000/locations'),{
@@ -40,7 +46,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <SearchBar setSearchInput={setSearchInput} />
+      <SearchBar setSearchInput={setSearchInput} destinations = {destinations}  />
     </div>
   );
 }
