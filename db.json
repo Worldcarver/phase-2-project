@@ -1,3 +1,9 @@
 {
-  "locations": []
-  }
+  "locations": [
+    {
+      "id": 1, 
+      "description": "Las Vegas",
+      "image": "http://t1.gstatic.com/licensed-image?q=tbn:ANd9GcSthIPMtKs8mwhm8xsenqh6VRUHnfV2-he9NkLRbVfhfbGLzZb_rOxF5bULVwbJx1Qx"
+    }
+  ]
+}
