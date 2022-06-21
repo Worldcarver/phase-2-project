@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Header from './Components/Header'
 import DestinationDisplay from './Components/DesitnationDisplay'
 import DestinationList from './Components/DestinationList';
-//import DestinationList from './Components/DestinationList'
+
 
 // need to set json server to different port? how?
 // send fetch to external api, and send post to json to capture data, inerpolate the data?
@@ -14,7 +14,7 @@ import DestinationList from './Components/DestinationList';
 function App() {
 
   const [destinations, setDestinations] = useState([])
-  const [searchInput, setSearchInput] = useState("")
+  const [favDest, setFavDest] = useState([])
 
   useEffect(() => {
  
@@ -25,12 +25,23 @@ function App() {
 
 }, [])
 
+function destPicker(newDest){
+  if (favDest.includes(newDest) === false) {
+    setFavDest([...favDest, newDest])
+  } else {
+    const removeFavDest = favDest.filter((dest) => {
+      return dest !== newDest
+    })
+    setFavDest(removeFavDest)
+  }
+
+}
 
   return (
     <div className="App">
       <Header />
-      
-      <DestinationList destinations = {destinations} />
+      <DestinationDisplay destPicker = {destPicker} favDest = {favDest}/>
+      <DestinationList destinations = {destinations} destPicker = {destPicker}/>
     </div>
   );
 }

@@ -34,6 +34,7 @@ img {
   display: grid;
   gap: 40px 10px;
   list-style: none;
+  justify-content: center;
 }
 header {
   border-bottom: 1px #ccc solid;
@@ -42,4 +43,14 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.row.fav-dest-row {
+  padding: 1rem;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: grid;
+  gap: 40px 10px;
+  list-style: none;
+  justify-content: center;
 }

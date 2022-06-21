@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 
-function DestinationCard({ destination }) {
+function DestinationCard({ destination, destPicker }) {
 
 
     const [favorited, setFavorited] = useState(false)
@@ -11,7 +11,7 @@ function DestinationCard({ destination }) {
       }
     return (
         <li className="card">
-            <div className="cardimage">
+            <div className="cardimage" onClick = {() => destPicker(destination)}>
                 <span className="price"></span>
                 <img src={destination.image} alt={destination.description} />
             </div>
