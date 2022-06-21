@@ -17,3 +17,29 @@ code {
   display: flex;
   justify-content: center;
 }
+.card {
+  height: 300px;
+  width: 300px;
+  box-shadow: 0 0 7px 0 black;
+  border: 1px solid black;
+}
+img {
+  height: 300px;
+  width: 300px;
+}
+.row {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: grid;
+  gap: 40px 10px;
+  list-style: none;
+}
+header {
+  border-bottom: 1px #ccc solid;
+  background: #eee;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

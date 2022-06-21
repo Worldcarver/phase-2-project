@@ -6,14 +6,14 @@ import DestinationCard from "./DestinationCard";
 function DestinationList({ destinations }) {
     console.log("destinations passed from app:", destinations)
     return (
-        <main>
-            <ul className="cards">
+        <div className="ui four column grid">
+            <ul className="row">
                 {/*displays settings*/}
                 {destinations.map((destination) => (
                     <DestinationCard key={destination.id} destination={destination} />
                 ))}
             </ul>
-        </main>
+        </div>
     )
 
 }

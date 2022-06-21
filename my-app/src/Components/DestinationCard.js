@@ -1,26 +1,30 @@
-import React from "react";
+import React, {useState} from "react";
 
 
 function DestinationCard({ destination }) {
 
+
+    const [favorited, setFavorited] = useState(false)
+
+    function handleFavorited(){
+        setFavorited((favorited) => !favorited)
+      }
     return (
         <li className="card">
-            <div className="image">
+            <div className="cardimage">
                 <span className="price"></span>
                 <img src={destination.image} alt={destination.description} />
             </div>
             <div className="details">
-                {true ? (
-                    <button className="emoji-button favorite active">⭐</button>
+                {favorited ? (
+                    <button onClick ={handleFavorited} className="emoji-button favorite active">★</button>
                 ) : (
-                    <button className="emoji-button favorite">⭐</button>
+                    <button onClick ={handleFavorited} className="emoji-button favorite">☆</button>
                 )}
                 <strong>{destination.description}</strong>
                 <span></span>
             </div>
         </li>
     )
-
 }
-
 export default DestinationCard
