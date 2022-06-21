@@ -1,3 +1,4 @@
+
 // import React, { useState } from "react";
 
 // //send data on favorite button
@@ -18,3 +19,4 @@
 //   }
 
 // export default SearchBar;
+

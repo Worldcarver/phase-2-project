@@ -1,9 +1,9 @@
+
 import React, { useEffect, useState } from 'react';
 //import SearchBar from './Components/SearchBar';
 import Header from './Components/Header'
 import DestinationDisplay from './Components/DesitnationDisplay'
 import DestinationList from './Components/DestinationList';
-
 
 // need to set json server to different port? how?
 // send fetch to external api, and send post to json to capture data, inerpolate the data?
@@ -42,6 +42,7 @@ function destPicker(newDest){
       <Header />
       <DestinationDisplay destPicker = {destPicker} favDest = {favDest}/>
       <DestinationList destinations = {destinations} destPicker = {destPicker}/>
+
     </div>
   );
 }
