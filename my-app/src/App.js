@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Header from './Components/Header'
 import DestinationDisplay from './Components/DesitnationDisplay'
 import DestinationList from './Components/DestinationList';
+import NewDestinationForm from './Components/NewDesitnationForm';
 
 
 // need to set json server to different port? how?
@@ -42,6 +43,7 @@ function destPicker(newDest){
       <Header />
       <DestinationDisplay destPicker = {destPicker} favDest = {favDest}/>
       <DestinationList destinations = {destinations} destPicker = {destPicker}/>
+      <NewDestinationForm setDestinations={setDestinations} />
     </div>
   );
 }
