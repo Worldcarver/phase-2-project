@@ -54,3 +54,11 @@ header {
   list-style: none;
   justify-content: center;
 }
+nav {
+  text-decoration: none;
+  justify-content: center;
+  text-align: center;
+  float: center;
+  gap: 30px;
+
+}

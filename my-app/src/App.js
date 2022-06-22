@@ -4,6 +4,8 @@ import Header from './Components/Header'
 import DestinationDisplay from './Components/DesitnationDisplay'
 import DestinationList from './Components/DestinationList';
 import NewDestinationForm from './Components/NewDesitnationForm';
+import { Switch, Route, NavLink } from "react-router-dom"
+import {BrowserRouter as Router} from "react-router-dom"
 
 // need to set json server to different port? how?
 // send fetch to external api, and send post to json to capture data, inerpolate the data?
@@ -39,12 +41,34 @@ function destPicker(newDest){
 
   return (
     <div className="App">
+      
+     
       <Header />
-      <DestinationDisplay destPicker = {destPicker} favDest = {favDest}/>
+     
+      <Router>
+      <nav>
+                <span id = "nav-1">
+                <NavLink to="/"> Home </NavLink>
+                </span>
+                <span id = "nav-2">
+                <NavLink to ="/NewDestinationForm">Add a Destination!</NavLink>
+                </span>
+                <span id = "nav-3">
+                <NavLink to ="/DestinationDisplay">Travel List!</NavLink>
+                </span>
+      </nav>
+      <Switch>
+        <Route exact path = "/">
       <DestinationList destinations = {destinations} destPicker = {destPicker}/>
-      <NewDestinationForm setDestinations={setDestinations} />
-
-
+      </Route>
+        <Route path ="/DestinationDisplay">
+          <DestinationDisplay destPicker = {destPicker} favDest = {favDest}/>
+        </Route>
+        <Route path ="/NewDestinationForm">
+          <NewDestinationForm setDestinations={setDestinations} />
+        </Route>
+    </Switch>
+    </Router>
     </div>
   );
 }
