@@ -6,6 +6,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### Description
+
+This application allows the user to search through popular destinations for their upcoming travels. With this app, you can look through a wide variety of locations and even make a favorite list as well as modify it as the user needs to based on their preference. This tool is a great option for individuals who are indecisive and need a push in the right direction with planning their upcoming trip.
+
+Some challenges we faced was how much information we should include per destination. We considered including prices but with the economy as well as state wide changes that can happen at any time, we will instead work to implement a system that will self update the price when used. Our team will be looking to implement this feature in the near feature.
+
 ### `npm start`
 
 Runs the app in the development mode.\
@@ -68,3 +74,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
